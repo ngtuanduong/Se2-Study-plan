@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pdftotext \"c:\\\\Users\\\\duong\\\\Downloads\\\\Se2_Lecture\\\\Lecture 9.pdf\" -)"
+      "Bash(pdftotext \"c:\\\\Users\\\\duong\\\\Downloads\\\\Se2_Lecture\\\\Lecture 9.pdf\" -)",
+      "Bash(node -e ' *)"
     ]
   }
 }

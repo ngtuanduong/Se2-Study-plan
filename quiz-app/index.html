@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE2 Quiz — HANU FIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📚 SE2 Quiz</h1>
+        <p class="subtitle">Software Engineering 2 — HANU FIT</p>
+    </header>
+
+    <main id="app">
+        <!-- Home View -->
+        <section id="home-view" class="view active">
+            <h2>Chọn Lecture để luyện tập</h2>
+            <div id="lecture-grid" class="grid"></div>
+            <div class="footer-note">
+                <p>💡 Tip: Đáp án chính xác bắt buộc đúng từng chữ (case-insensitive).<br>
+                Kết quả chỉ tồn tại trong session hiện tại — refresh sẽ mất.</p>
+            </div>
+        </section>
+
+        <!-- Quiz View -->
+        <section id="quiz-view" class="view">
+            <div class="quiz-header">
+                <button id="back-home-btn" class="btn-secondary">← Trở về</button>
+                <div class="quiz-info">
+                    <h2 id="quiz-title">Lecture Title</h2>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <p class="progress-text"><span id="current-q">1</span> / <span id="total-q">10</span> | Điểm: <span id="score">0</span></p>
+                </div>
+            </div>
+
+            <div id="question-container" class="question-card">
+                <div class="question-type-badge" id="q-type-badge">MCQ</div>
+                <p id="question-text" class="question-text"></p>
+                <div id="answers-container"></div>
+
+                <div id="feedback" class="feedback hidden">
+                    <p id="feedback-text"></p>
+                    <p id="explanation" class="explanation"></p>
+                </div>
+
+                <div class="quiz-buttons">
+                    <button id="submit-btn" class="btn-primary">Trả lời</button>
+                    <button id="next-btn" class="btn-primary hidden">Câu tiếp →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result View -->
+        <section id="result-view" class="view">
+            <h2>🎉 Kết quả</h2>
+            <div class="result-summary">
+                <div class="score-circle" id="score-circle">
+                    <span id="final-score">0</span><span class="score-total">/<span id="final-total">0</span></span>
+                </div>
+                <p class="result-percentage" id="result-percentage">0%</p>
+                <p class="result-message" id="result-message">Hoàn thành!</p>
+            </div>
+
+            <h3>Chi tiết từng câu</h3>
+            <div id="result-details"></div>
+
+            <div class="result-buttons">
+                <button id="retry-btn" class="btn-primary">🔄 Làm lại</button>
+                <button id="home-btn-result" class="btn-secondary">🏠 Trang chủ</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
